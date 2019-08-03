@@ -11,7 +11,7 @@ return [
      *
      * Leave blank for auto discovery
      */
-    'user_model' => '',
+    'user_model' => Intrasocial\Entities\User::class,
 
     /*
      * Default Role model used by Defender.
