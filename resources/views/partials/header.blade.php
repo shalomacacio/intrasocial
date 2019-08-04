@@ -27,6 +27,7 @@
                             Ouvidoria
                         </a>
                     </li>
+
                     <li>
                         <a href="#" title="" class="not-box-open">
                             <span><img src="storage/images/icon7.png" alt=""></span>
@@ -75,7 +76,7 @@
                                       </div><!--notification-info -->
                                   </div>
                                   <div class="view-all-nots">
-                                      <a href="#" title="">View All Notification</a>
+                                      <a href="#" title="">Todas as Notificações</a>
                                   </div>
                             </div><!--nott-list end-->
                         </div><!--notification-box end-->
@@ -89,47 +90,17 @@
                 <div class="user-info">
                     <img src="storage/images/resources/user.png" alt="">
                     @auth
-                    <a href="{{ route('login') }}">{{ Auth::user()->name }}</a>
+                    <a href="#">{{ Auth::user()->name }}</a>
                     @endauth
                     <i class="la la-sort-down"></i>
                 </div>
                 <div class="user-account-settingss">
-                    <h3>Online Status</h3>
-                    <ul class="on-off-status">
-                        <li>
-                            <div class="fgt-sec">
-                                <input type="radio" name="cc" id="c5">
-                                <label for="c5">
-                                    <span></span>
-                                </label>
-                                <small>Online</small>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="fgt-sec">
-                                <input type="radio" name="cc" id="c6">
-                                <label for="c6">
-                                    <span></span>
-                                </label>
-                                <small>Offline</small>
-                            </div>
-                        </li>
-                    </ul>
-                    <h3>Custom Status</h3>
-                    <div class="search_form">
-                        <form>
-                            <input type="text" name="search">
-                            <button type="submit">Ok</button>
-                        </form>
-                    </div><!--search_form end-->
-                    <h3>Setting</h3>
+                    <h3>Configurações</h3>
                     <ul class="us-links">
-                        <li><a href="profile-account-setting.html" title="">Account Setting</a></li>
-                        <li><a href="#" title="">Privacy</a></li>
-                        <li><a href="#" title="">Faqs</a></li>
-                        <li><a href="#" title="">Terms & Conditions</a></li>
+                        <li><a href="profile-account-setting.html" title="">Meus Dados</a></li>
+                        <li><a href="#" title="">Minhas Postagens</a></li>
                     </ul>
-                    <h3 class="tc"><a href="#" title="">Logout</a></h3>
+                  <h3 class="tc"><a href="{{ route('logout') }}" title="">Sair</a></h3>
                 </div><!--user-account-settingss end-->
             </div>
         </div><!--header-data end-->

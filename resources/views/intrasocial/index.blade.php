@@ -19,6 +19,6 @@
     </div><!--main-ws-sec end-->
   </div>
 
-@include('partials.form_post')
+@include('partials.post_form')
 
 @endsection
