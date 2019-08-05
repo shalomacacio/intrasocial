@@ -2,28 +2,23 @@
     <div class="post-bar">
       <div class="post_topbar">
         <div class="usy-dt">
-          <img src="images/resources/us-pic.png" alt="">
+          <img src="storage/images/resources/us-pic.png" alt="">
           <div class="usy-name">
-            <h3>Fulano</h3>
-            <span><img src="images/clock.png" alt="">3 min ago</span>
+            <h3>{{ $post->user->name }}</h3>
+            <span><img src="images/clock.png" alt="">{{ $post->created_at }}</span>
           </div>
         </div>
+
         <div class="ed-opts">
           <a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
           <ul class="ed-options">
-            <li><a href="#" title="">Edit Post</a></li>
-            <li><a href="#" title="">Unsaved</a></li>
-            <li><a href="#" title="">Unbid</a></li>
-            <li><a href="#" title="">Close</a></li>
-            <li><a href="#" title="">Hide</a></li>
+            <li><a href="#" title="">Editar</a></li>
+            <li><a href="#" title="">Excluir</a></li>
           </ul>
         </div>
+
       </div>
       <div class="epi-sec">
-        <ul class="descp">
-          <li><img src="images/icon8.png" alt=""><span>Epic Coder</span></li>
-          <li><img src="images/icon9.png" alt=""><span>India</span></li>
-        </ul>
         <ul class="bk-links">
           <li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
           <li><a href="#" title=""><i class="la la-envelope"></i></a></li>
@@ -35,14 +30,7 @@
           <li><a href="#" title="">Full Time</a></li>
           <li><span>$30 / hr</span></li>
         </ul>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id magna sit amet... <a href="#" title="">view more</a></p>
-        <ul class="skill-tags">
-          <li><a href="#" title="">HTML</a></li>
-          <li><a href="#" title="">PHP</a></li>
-          <li><a href="#" title="">CSS</a></li>
-          <li><a href="#" title="">Javascript</a></li>
-          <li><a href="#" title="">Wordpress</a></li>
-        </ul>
+        <p>{{ $post->description }}</p>
       </div>
       <div class="job-status-bar">
         <ul class="like-com">

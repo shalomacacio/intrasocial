@@ -14,8 +14,10 @@
           </ul>
         </div><!--post-st end-->
       </div><!--post-topbar end-->
+      @foreach ($posts as $post)
+        @include('partials.post')
+      @endforeach
 
-      @include('partials.post')
     </div><!--main-ws-sec end-->
   </div>
 

@@ -9,6 +9,8 @@ mix.webpackConfig({
     }
  });
 
+
+
 mix.browserSync('localhost');
 
 mix.js('resources/js/app.js', 'public/js')

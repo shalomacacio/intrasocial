@@ -9,8 +9,8 @@
     <meta name="keywords" content="" />
 
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('social/css/line-awesome.css') }}" rel="stylesheet">
-    <link href="{{ asset('social/css/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/vendor/line-awesome.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/vendor/font-awesome.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/social.css') }}" rel="stylesheet">
 </head>
 

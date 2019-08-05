@@ -6,7 +6,7 @@ Route::get('/login', "AuthenticateController@login")->name('login');
 Route::get('/logout', "AuthenticateController@logout")->name('logout');
 Route::post('/auth', "AuthenticateController@auth")->name('auth');
 
-Route::get('/intrasocial', "AuthenticateController@intrasocial")->name('intrasocial')->middleware('auth');
+Route::get('/intrasocial', "IntrasocialController@index")->name('intrasocial')->middleware('auth');
 Route::resource('posts', 'PostsController');
 
 // Route::get('/portalrh', "AuthenticateController@intrasocial")->name('intrasocial')->middleware('auth');

@@ -28,11 +28,6 @@ class AuthenticateController extends Controller
         return redirect()->route('login');
     }
 
-    public function intrasocial()
-    {
-        return view('intrasocial.index');
-    }
-
     public function auth(Request $request)
     {
         $data = [
