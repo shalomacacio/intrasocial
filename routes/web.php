@@ -8,6 +8,7 @@ Route::post('/auth', "AuthenticateController@auth")->name('auth');
 
 Route::get('/intrasocial', "IntrasocialController@index")->name('intrasocial')->middleware('auth');
 Route::resource('posts', 'PostsController');
+Route::resource('coments', 'ComentsController');
 
 // Route::get('/portalrh', "AuthenticateController@intrasocial")->name('intrasocial')->middleware('auth');
 // Route::get('/ouvidoria', "AuthenticateController@intrasocial")->name('intrasocial')->middleware('auth');

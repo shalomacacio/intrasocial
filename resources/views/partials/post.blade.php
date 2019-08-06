@@ -1,50 +1,53 @@
-<div class="posts-section">
-    <div class="post-bar">
+<div class="posty">
+    <div class="post-bar no-margin">
       <div class="post_topbar">
         <div class="usy-dt">
           <img src="storage/images/resources/us-pic.png" alt="">
           <div class="usy-name">
-            <h3>{{ $post->user->name }}</h3>
-            <span><img src="images/clock.png" alt="">{{ $post->created_at }}</span>
+          <h3>{{$post->user->name}}</h3>
+            <span><img src="storage/images/clock.png" alt="">{{$post->tempo}}</span>
           </div>
         </div>
-
         <div class="ed-opts">
           <a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
           <ul class="ed-options">
-            <li><a href="#" title="">Editar</a></li>
-            <li><a href="#" title="">Excluir</a></li>
+              <form action="{{ route('posts.destroy', $post->id)}}" method="post">
+                @csrf
+                @method('DELETE')
+                <button class="btn " onclick="return confirm('Deseja excluir esta publicação?')" type="submit">Excluir</button>
+              </form>
           </ul>
         </div>
-
-      </div>
-      <div class="epi-sec">
-        <ul class="bk-links">
-          <li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
-          <li><a href="#" title=""><i class="la la-envelope"></i></a></li>
-        </ul>
       </div>
       <div class="job_descp">
-        <h3>Senior Wordpress Developer</h3>
-        <ul class="job-dt">
-          <li><a href="#" title="">Full Time</a></li>
-          <li><span>$30 / hr</span></li>
-        </ul>
-        <p>{{ $post->description }}</p>
+          <p>{{ $post->description }}</p>
       </div>
       <div class="job-status-bar">
         <ul class="like-com">
-          <li>
-            <a href="#"><i class="la la-heart"></i> Like</a>
-            <img src="images/liked-img.png" alt="">
-            <span>25</span>
-          </li>
-          <li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Comment 15</a></li>
+            <li><a href="#" title="" class="com"><img src="storage/images/com.png" alt=""> Like </a></li>
+          <li><a href="#" title="" class="com"><img src="storage/images/com.png" alt=""> Comment {{count($post->coments)}} </a></li>
         </ul>
-        <a><i class="la la-eye"></i>Views 50</a>
+        {{-- <a><i class="la la-eye"></i>Views 50</a> --}}
       </div>
     </div><!--post-bar end-->
-    <div class="process-comm">
-      <a href="#" title=""><img src="images/process-icon.png" alt=""></a>
-    </div><!--process-comm end-->
-  </div><!--posts-section end-->
+    <div class="comment-section">
+      @foreach ($post->coments as $coment)
+        @include('partials.post_coment')
+      @endforeach
+
+      <div class="post-comment">
+        <div class="cm_img">
+          <img src="storage/images/resources/bg-img4.png" alt="">
+        </div>
+        <div class="comment_box">
+          <form action="{{ route('coments.store')}}" method="post">
+            @csrf'
+            <input type="text" name="description" id="description" placeholder="Comentário">
+            <input id="user_id" name="user_id" type="hidden" value="{{Auth::user()->id}}">
+            <input id="post_id" name="post_id" type="hidden" value="{{$post->id}}">
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+      </div><!--post-comment end-->
+    </div><!--comment-section end-->
+  </div><!--posty end-->

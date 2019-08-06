@@ -4,7 +4,7 @@
 
 /*===================== TABLE OF CONTENT =======================
 1.	3 Homepages
-2.  Fonts 
+2.  Fonts
 3.  Reset Css
 4.  Cross Browser Compatibility
 5.  Header
@@ -34,13 +34,13 @@
 
 
 
-/* ================================================================================== 
+/* ==================================================================================
 								Fonts
 ===================================================================================== */
 
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i');
 
-/* ================================================================================== 
+/* ==================================================================================
 										Reset Css
 ===================================================================================== */
 
@@ -53,8 +53,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -65,7 +65,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -406,7 +406,7 @@ nav ul ul {
 	width: 200px;
 	background-color: #e44d3a;
 	text-align: left;
-	padding: 20px 0 10px 0; 
+	padding: 20px 0 10px 0;
 	opacity: 0;
 	visibility: hidden;
 }
@@ -798,7 +798,7 @@ main {
 .user-fw-status li a {
 	color: #e44d3a;
 	font-size: 14px;
-	font-weight: 600;	
+	font-weight: 600;
 }
 
 /* ============= Suggestions ============ */
@@ -865,7 +865,7 @@ main {
 	width: 30px;
 	height: 30px;
 	border: 1px solid #e5e5e5;
-	text-align: center;	
+	text-align: center;
 	line-height: 30px;
 	font-weight: 700;
 	cursor: pointer;
@@ -1170,7 +1170,7 @@ main {
 	top: -3px;
 }
 .bid_now:hover {
-	color: #fff;	
+	color: #fff;
 }
 
 
@@ -1478,7 +1478,7 @@ main {
 	margin-left: -2px;
 }
 .slick-nexti:before {
-	right: -14px;	
+	right: -14px;
 	content: '\f105';
 	padding-left: 3px;
 }
@@ -1563,7 +1563,7 @@ main {
 }
 .comment-list {
 	display: table;
-	padding-bottom: 30px;
+	padding-bottom: 2px;
 }
 .bg-img {
 	display: table-cell;
@@ -1594,9 +1594,9 @@ main {
 }
 .comment span {
 	color: #b2b2b2;
-	font-size: 14px;
+	font-size: 9px;
 	display: block;
-	margin-bottom: 14px;
+	margin-bottom: 5px;
 }
 .comment p {
 	color: #686868;
@@ -1890,7 +1890,7 @@ main {
 .post-project-fields form ul li a:hover {
 	background-color: #e44d3a;
 	color: #fff;
-} 
+}
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: #b2b2b2;
 }
@@ -2238,7 +2238,7 @@ select {
 }
 .fgt-sec input[type="checkbox"] {
 	display: none;
-} 
+}
 .fgt-sec label {
 	float: left;
 }
@@ -2301,7 +2301,7 @@ select {
 
 .fgt-sec input[type="radio"] {
 	display: none;
-} 
+}
 .fgt-sec label {
 	float: left;
 }
@@ -2377,7 +2377,7 @@ select {
 }
 .signup-tab ul li {
 	display: inline-block;
-	margin-right: -4px;	
+	margin-right: -4px;
 }
 .signup-tab ul li a {
 	color: #000000;
@@ -2840,7 +2840,7 @@ footer {
 	transform: scale(1.2);
 }
 .pf-gallery img {
-	width: 100%;	
+	width: 100%;
 }
 
 .product-feed-tab {
@@ -3065,7 +3065,7 @@ footer {
 	font-weight: 600;
 	float: left;
 	width: 100%;
-	margin-bottom: 25px;	
+	margin-bottom: 25px;
 }
 .overview-edit span {
 	color: #b2b2b2;
@@ -3234,7 +3234,7 @@ a:hover {
 	border-left: 1px solid #e4e4e4;
 	border-right: 1px solid #e4e4e4;
 	border-bottom: 1px solid #e4e4e4;
-	margin-bottom: 20px;	
+	margin-bottom: 20px;
 }
 .billing-method ul {
 	float: left;
@@ -3772,7 +3772,7 @@ a:hover {
 	-o-border-radius: 100px;
 	border-radius: 100px;
 	background-color: #e44d3a;
-	border: 2px solid #e3e3e3;	
+	border: 2px solid #e3e3e3;
 	-webkit-box-shadow: 1px 2px 3px rgba(0,0,0,0.43);
 	-moz-box-shadow: 1px 2px 3px rgba(0,0,0,0.43);
 	-ms-box-shadow: 1px 2px 3px rgba(0,0,0,0.43);
@@ -3816,7 +3816,7 @@ a:hover {
 }
 .rg-limit h4 {
 	color: #686868;
-	font-size: 15px;	
+	font-size: 15px;
 	font-weight: 600;
 	float: left;
 }
@@ -4373,7 +4373,7 @@ a:hover {
 }
 .cp-field textarea {
 	padding: 20px;
-	height: 115px;	
+	height: 115px;
 }
 .cpp-fiel i {
 	position: absolute;
@@ -4538,7 +4538,7 @@ a:hover {
 	font-size: 20px;
 	font-weight: 600;
 	margin-bottom: 5px;
-}	
+}
 .bx-info h5 {
 	color: #000000;
 	font-size: 14px;
@@ -4937,7 +4937,7 @@ a:hover {
 	border-color:#e44d3a;
 }
 .forum-links ul li.active a {
-	color: #e44d3a;	
+	color: #e44d3a;
 }
 .forum-links ul li a {
 	display: inline-block;
@@ -5121,7 +5121,7 @@ a:hover {
 }
 .widget-user ul li .usr-ms-img {
 	width: 35px;
-} 
+}
 .widget-user ul li .usr-mg-info h3 {
 	font-size: 14px;
 }

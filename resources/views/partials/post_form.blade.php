@@ -1,6 +1,6 @@
 <div class="post-popup job_post">
     <div class="post-project">
-      <h3>Post</h3>
+      <h3>Publicação</h3>
       <div class="post-project-fields">
       <form action="{{ route('posts.store') }}" method="POST">
         @csrf
@@ -14,13 +14,13 @@
               </div>
             </div>
             <div class="col-lg-12">
-              <textarea name="description" placeholder="Description"></textarea>
+              <textarea name="description" placeholder="Descrição"></textarea>
             </div>
             <input id="user_id" name="user_id" type="hidden" value="{{Auth::user()->id}}">
             <div class="col-lg-12">
               <ul>
                 <li><button class="active" type="submit" >Postar</button></li>
-                <li><a href="#" title="">Cancel</a></li>
+                <li><a href="#" title="">Cancelar</a></li>
               </ul>
             </div>
           </div>

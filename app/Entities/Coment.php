@@ -7,13 +7,12 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Prettus\Repository\Contracts\Transformable;
 use Prettus\Repository\Traits\TransformableTrait;
 use Illuminate\Support\Carbon;
-
 /**
- * Class Post.
+ * Class Coment.
  *
  * @package namespace Intrasocial\Entities;
  */
-class Post extends Model implements Transformable
+class Coment extends Model implements Transformable
 {
     use TransformableTrait;
     use SoftDeletes;
@@ -26,8 +25,7 @@ class Post extends Model implements Transformable
     protected $fillable =
     [
       'user_id',
-      'setor_id',
-      'img',
+      'post_id',
       'description',
       'created_at'
     ];
@@ -38,19 +36,17 @@ class Post extends Model implements Transformable
         $tempo = $dataFinal->diffInDays(Carbon::now());
         if($tempo <= 0){
             $tempo = $dataFinal->diffInHours(Carbon::now());
-            return "Faltam:".$tempo." horas";
+            return "há:".$tempo." horas";
         }
-        return $tempo." dias";
+        return "há:".$tempo." dias";
     }
-
 
     public function user(){
       return $this->belongsTo('Intrasocial\Entities\User');
     }
 
-
-    public function coments(){
-      return $this->hasMany('Intrasocial\Entities\Coment');
+    public function post(){
+      return $this->belongsTo('Intrasocial\Entities\Post');
     }
 
 }

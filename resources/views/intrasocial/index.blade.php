@@ -22,5 +22,6 @@
   </div>
 
 @include('partials.post_form')
+@include('partials.edit_form')
 
 @endsection

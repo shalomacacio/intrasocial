@@ -15147,7 +15147,7 @@ $(window).on("load", function () {
     $("#question-box").removeClass("open");
     $(".wrapper").removeClass("overlay");
     return false;
-  }); //  ============== ChatBox ============== 
+  }); //  ============== ChatBox ==============
 
   $(".chat-mg").on("click", function () {
     $(this).next(".conversation-box").toggleClass("active");
