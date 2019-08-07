@@ -2,7 +2,7 @@
     <div class="post-bar no-margin">
       <div class="post_topbar">
         <div class="usy-dt">
-          <img src="storage/images/resources/us-pic.png" alt="">
+          <img src="storage/images/resources/users/{{Auth::user()->id}}/M.png" alt="">
           <div class="usy-name">
           <h3>{{$post->user->name}}</h3>
             <span><img src="storage/images/clock.png" alt="">{{$post->tempo}}</span>
