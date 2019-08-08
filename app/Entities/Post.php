@@ -32,6 +32,11 @@ class Post extends Model implements Transformable
       'created_at'
     ];
 
+    public function setImgAttribute()
+    {
+      $this->attributes['img'] = time().'.'.request()->img->getClientOriginalExtension();
+    }
+
     public function getTempoAttribute()
     {
         $dataFinal = Carbon::createFromFormat('Y-m-d H:i:s', $this->created_at );

@@ -1,3 +1,7 @@
+<div class="posts-section">
+    <div class="post-bar">
+
+
 <div class="posty">
     <div class="post-bar no-margin">
       <div class="post_topbar">
@@ -5,7 +9,6 @@
           <img src="storage/images/resources/users/{{Auth::user()->id}}/M.png" alt="">
           <div class="usy-name">
           <h3>{{$post->user->name}}</h3>
-            <span><img src="storage/images/clock.png" alt="">{{$post->tempo}}</span>
           </div>
         </div>
         <div class="ed-opts">
@@ -21,6 +24,7 @@
       </div>
       <div class="job_descp">
           <p>{{ $post->description }}</p>
+          <img class="img-fluid" src="storage/images/posts/{{$post->img}}" width="476" alt="">
       </div>
       <div class="job-status-bar">
         <ul class="like-com">
@@ -49,5 +53,9 @@
           </form>
         </div>
       </div><!--post-comment end-->
+
     </div><!--comment-section end-->
   </div><!--posty end-->
+    </div>
+</div>
+

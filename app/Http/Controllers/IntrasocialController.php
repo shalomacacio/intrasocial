@@ -21,7 +21,7 @@ class IntrasocialController extends Controller
     public function index()
     {
         $this->repository->pushCriteria(app('Prettus\Repository\Criteria\RequestCriteria'));
-        $posts = $this->repository->all();
+        $posts = $this->repository->orderBy('created_at','desc')->all();
 
         if (request()->wantsJson()) {
 

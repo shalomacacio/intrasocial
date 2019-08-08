@@ -76,7 +76,13 @@ class PostsController extends Controller
 
             $this->validator->with($request->all())->passesOrFail(ValidatorInterface::RULE_CREATE);
 
+            //salva o post
             $post = $this->repository->create($request->all());
+
+            //guarda a imagem
+            if($request->hasFile('img')) {
+              $this->repository->saveImage($request->img, $post->img);
+            }
 
             $response = [
                 'message' => 'Post created.',

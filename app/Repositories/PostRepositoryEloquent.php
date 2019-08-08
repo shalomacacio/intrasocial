@@ -7,6 +7,9 @@ use Prettus\Repository\Criteria\RequestCriteria;
 use Intrasocial\Repositories\PostRepository;
 use Intrasocial\Entities\Post;
 use Intrasocial\Validators\PostValidator;
+//bibliotecas de imagem
+use Illuminate\Support\Facades\Storage;
+use Intervention\Image\Facades\Image;
 
 /**
  * Class PostRepositoryEloquent.
@@ -23,6 +26,11 @@ class PostRepositoryEloquent extends BaseRepository implements PostRepository
     public function model()
     {
         return Post::class;
+    }
+
+    public function saveImage($img, $name){
+      //criar o diretório se ele não existir
+      $upload =  $img->storeAs('images/posts/', $name);
     }
 
     /**
@@ -44,5 +52,5 @@ class PostRepositoryEloquent extends BaseRepository implements PostRepository
     {
         $this->pushCriteria(app(RequestCriteria::class));
     }
-    
+
 }

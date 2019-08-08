@@ -2,7 +2,7 @@
     <div class="post-project">
       <h3>Publicação</h3>
       <div class="post-project-fields">
-      <form action="{{ route('posts.store') }}" method="POST">
+      <form action="{{ route('posts.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
           <div class="row">
             <div class="col-lg-12">
@@ -12,6 +12,9 @@
                   <option value="2">Somente Meu Setor</option>
                 </select>
               </div>
+            </div>
+            <div class="col-lg-12">
+              <input type="file"  id="img" name="img" placeholder="Imagem">
             </div>
             <div class="col-lg-12">
               <textarea name="description" placeholder="Descrição"></textarea>
