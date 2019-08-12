@@ -33,6 +33,11 @@ class PostRepositoryEloquent extends BaseRepository implements PostRepository
       $upload =  $img->storeAs('images/posts/', $name);
     }
 
+    public function deleteImage($id){
+      $post = $this->find($id);
+      Storage::disk('public')->delete('images/posts/'. $post->img);
+    }
+
     /**
     * Specify Validator class name
     *

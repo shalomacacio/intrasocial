@@ -7,6 +7,9 @@ use Prettus\Repository\Criteria\RequestCriteria;
 use Intrasocial\Repositories\UserRepository;
 use Intrasocial\Entities\User;
 use Intrasocial\Validators\UserValidator;
+//bibliotecas de imagem
+use Illuminate\Support\Facades\Storage;
+use Intervention\Image\Facades\Image;
 
 /**
  * Class UserRepositoryEloquent.
@@ -22,7 +25,30 @@ class UserRepositoryEloquent extends BaseRepository implements UserRepository
      */
     public function model()
     {
-        return User::class;
+      return User::class;
+    }
+
+    public function saveImage($img, $folder){
+
+      //cria o diretório se ele não existir
+      Storage::makeDirectory('images/users/'.$folder.'/');
+      $extension = $img->extension();
+      $name = "avatar";
+      $path=  $img->storeAs('images/users/'.$folder, $name.'.'.$extension, 'public');
+      // return dd($path); //"images/users/1/avatar.png"
+
+      //resize
+      $thumbnailpath = public_path('storage/images/users/'.$folder.'/'.$name.'.'.$extension );
+      // return dd($thumbnailpath);
+      $img = Image::make($thumbnailpath);
+      $img->resize(100 , 100)->save(public_path('storage/images/users/'.$folder.'/avatar_g.'.$extension ));
+      $img->resize(50 , 50)->save(public_path('storage/images/users/'.$folder.'/avatar_m.'.$extension ));
+      $img->resize(30 , 30)->save(public_path('storage/images/users/'.$folder.'/avatar_p.'.$extension ));
+    }
+
+    public function deleteImage($id){
+      $post = $this->find($id);
+      Storage::disk('public')->delete('images/users/'. $post->img);
     }
 
     /**
@@ -44,5 +70,5 @@ class UserRepositoryEloquent extends BaseRepository implements UserRepository
     {
         $this->pushCriteria(app(RequestCriteria::class));
     }
-    
+
 }

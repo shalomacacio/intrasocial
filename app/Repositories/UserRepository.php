@@ -11,5 +11,6 @@ use Prettus\Repository\Contracts\RepositoryInterface;
  */
 interface UserRepository extends RepositoryInterface
 {
-    //
+  public function saveImage($img,$folder);
+  public function deleteImage($name);
 }

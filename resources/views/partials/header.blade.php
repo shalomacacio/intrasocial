@@ -88,7 +88,7 @@
             </div><!--menu-btn end-->
             <div class="user-account">
                 <div class="user-info">
-                    <img src="storage/images/resources/users/{{ Auth::user()->id }}/P.png" alt="">
+                    <img src="storage/images/users/{{ Auth::user()->id }}/avatar_p.{{ Auth::user()->img_path }}" alt="">
                     @auth
                     <a href="#">{{ Auth::user()->name }}</a>
                     @endauth

@@ -6,7 +6,7 @@
     <div class="post-bar no-margin">
       <div class="post_topbar">
         <div class="usy-dt">
-          <img src="storage/images/resources/users/{{Auth::user()->id}}/M.png" alt="">
+          <img src="storage/images/users/{{$post->user->id}}/avatar_m.{{$post->user->img_path}}" alt="">
           <div class="usy-name">
           <h3>{{$post->user->name}}</h3>
           </div>

@@ -3,7 +3,7 @@
       <li>
         <div class="comment-list">
           <div class="bg-img">
-            <img src="storage/images/resources/users/{{$coment->user->id}}/P.png" alt="">
+            <img src="storage/images/users/{{$coment->user->id}}/avatar_p.{{$coment->user->img_path}}" alt="">
           </div>
           <div class="comment">
             <div class="ed-opts">

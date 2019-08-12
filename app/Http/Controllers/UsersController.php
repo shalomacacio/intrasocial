@@ -61,6 +61,12 @@ class UsersController extends Controller
         return view('users.index', compact('users'));
     }
 
+
+    public function create()
+    {
+      return view('users.create');
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -75,8 +81,9 @@ class UsersController extends Controller
         try {
 
             $this->validator->with($request->all())->passesOrFail(ValidatorInterface::RULE_CREATE);
-
             $user = $this->repository->create($request->all());
+            //guarda a imagem em uma pasta com o numero do id
+            $img = $this->repository->saveImage($request->img_path, $user->id);
 
             $response = [
                 'message' => 'User created.',

@@ -6,7 +6,7 @@
 
       <div class="post-topbar">
         <div class="user-picy">
-          <img src="storage/images/resources/users/{{Auth::user()->id}}/P.png" alt="">
+          <img src="storage/images/users/{{Auth::user()->id}}/avatar_m.{{Auth::user()->img_path}}" alt="">
         </div>
         <div class="post-st">
           <ul>

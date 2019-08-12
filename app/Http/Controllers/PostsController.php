@@ -195,6 +195,7 @@ class PostsController extends Controller
      */
     public function destroy($id)
     {
+        $this->repository->deleteImage($id);
         $deleted = $this->repository->delete($id);
 
         if (request()->wantsJson()) {

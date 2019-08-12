@@ -19,9 +19,18 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $fillable = [
-      'name', 'email', 'password',
+    protected $fillable =
+    [
+      'name',
+      'email',
+      'img_path',
+      'password',
     ];
+
+    public function setImgPathAttribute($value){
+      // return dd($value->extension());
+     $this->attributes['img_path'] = $value->extension();
+    }
 
     protected $hidden = [
       'password', 'remember_token',
