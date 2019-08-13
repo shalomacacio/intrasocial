@@ -79,7 +79,6 @@ class UsersController extends Controller
     public function store(UserCreateRequest $request)
     {
         try {
-
             $this->validator->with($request->all())->passesOrFail(ValidatorInterface::RULE_CREATE);
             $user = $this->repository->create($request->all());
             //guarda a imagem em uma pasta com o numero do id

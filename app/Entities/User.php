@@ -27,11 +27,21 @@ class User extends Authenticatable
       'password',
     ];
 
-    public function setImgPathAttribute($value){
-      // return dd($value->extension());
-     $this->attributes['img_path'] = $value->extension();
+    //MUTATORS
+    // public function setImgPathAttribute($value){
+    //   $this->attributes['img_path'] = $value->extension();
+    // }
+
+    public function getImgPathAttribute($value){
+      if(is_object($value)){
+        return $this->attributes['img_path'] = $value->extension();
+      }
+      return $value;
     }
 
+
+
+    //CASTS E HIDDEN
     protected $hidden = [
       'password', 'remember_token',
     ];
@@ -40,6 +50,7 @@ class User extends Authenticatable
       'email_verified_at' => 'datetime',
     ];
 
+    //RELATIONSHIPS
     public function posts()
     {
       return $this->harMany('Intrasocial\Entities\Post');
