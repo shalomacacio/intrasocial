@@ -15121,6 +15121,7 @@ $(window).on("load", function () {
     $(".wrapper").addClass("overlay");
     return false;
   });
+
   $(".close-box").on("click", function () {
     $("#create-portfolio").removeClass("open");
     $(".wrapper").removeClass("overlay");
@@ -15132,6 +15133,7 @@ $(window).on("load", function () {
     $(".wrapper").addClass("overlay");
     return false;
   });
+
   $(".close-box").on("click", function () {
     $("#total-employes").removeClass("open");
     $(".wrapper").removeClass("overlay");
@@ -15147,16 +15149,28 @@ $(window).on("load", function () {
     $("#question-box").removeClass("open");
     $(".wrapper").removeClass("overlay");
     return false;
-  }); //  ============== ChatBox ==============
+  }); 
+  
+  //  ============== ChatBox ==============
 
   $(".chat-mg").on("click", function () {
+    alert($(this));
     $(this).next(".conversation-box").toggleClass("active");
     return false;
   });
+
+  $(".chat-link").on("click", function () {
+    alert($(this));
+    $(".chat-mg").next(".conversation-box").toggleClass("active");
+    return false;
+  });
+
   $(".close-chat").on("click", function () {
     $(".conversation-box").removeClass("active");
     return false;
-  }); //  ================== Edit Options Function =================
+  }); 
+  
+  //  ================== Edit Options Function =================
 
   $(".ed-opts-open").on("click", function () {
     $(this).next(".ed-options").toggleClass("active");

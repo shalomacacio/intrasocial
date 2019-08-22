@@ -39,6 +39,12 @@ class User extends Authenticatable
       return $value;
     }
 
+    //funções auxiliares
+
+    public function getFirstNameAttribute(){
+      $firstname = explode(' ', trim($this->name))[0];
+    }
+
 
 
     //CASTS E HIDDEN
@@ -54,6 +60,11 @@ class User extends Authenticatable
     public function posts()
     {
       return $this->harMany('Intrasocial\Entities\Post');
+    }
+
+    public function messages()
+    {
+      return $this->hasMany('Intrasocial\Entities\Message');
     }
 
 

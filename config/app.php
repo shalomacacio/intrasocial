@@ -171,7 +171,7 @@ return [
          */
         Intrasocial\Providers\AppServiceProvider::class,
         Intrasocial\Providers\AuthServiceProvider::class,
-        // Intrasocial\Providers\BroadcastServiceProvider::class,
+        Intrasocial\Providers\BroadcastServiceProvider::class,
         Intrasocial\Providers\EventServiceProvider::class,
         Intrasocial\Providers\RouteServiceProvider::class,
 

@@ -11,6 +11,10 @@ Route::resource('posts', 'PostsController');
 Route::resource('coments', 'ComentsController');
 Route::resource('users', 'UsersController');
 
+Route::get('messages', 'MessagesController@fetchMessages')->name('fetchMessages');
+Route::post('/sendMessage', 'MessagesController@sendMessage')->name('sendMessage');
+Route::resource('messages', 'MessagesController');
+
 
 // Route::get('/portalrh', "AuthenticateController@intrasocial")->name('intrasocial')->middleware('auth');
 // Route::get('/ouvidoria', "AuthenticateController@intrasocial")->name('intrasocial')->middleware('auth');

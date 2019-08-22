@@ -88,9 +88,10 @@
             </div><!--menu-btn end-->
             <div class="user-account">
                 <div class="user-info">
-                    <img src="storage/images/users/{{ Auth::user()->id }}/avatar_p.{{ Auth::user()->img_path }}" alt="">
+
                     @auth
-                    <a href="#">{{ Auth::user()->name }}</a>
+                    <img src="storage/images/users/{{ Auth::user()->id }}/avatar_p.{{ Auth::user()->img_path }}" alt="">
+                    {{-- <a href="#">{{ Auth::user()->first_name }}</a> --}}
                     @endauth
                     <i class="la la-sort-down"></i>
                 </div>

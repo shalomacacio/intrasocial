@@ -26,6 +26,7 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(\Intrasocial\Repositories\UserRepository::class, \Intrasocial\Repositories\UserRepositoryEloquent::class);
         $this->app->bind(\Intrasocial\Repositories\PostRepository::class, \Intrasocial\Repositories\PostRepositoryEloquent::class);
         $this->app->bind(\Intrasocial\Repositories\ComentRepository::class, \Intrasocial\Repositories\ComentRepositoryEloquent::class);
+        $this->app->bind(\Intrasocial\Repositories\MessageRepository::class, \Intrasocial\Repositories\MessageRepositoryEloquent::class);
         //:end-bindings:
     }
 }

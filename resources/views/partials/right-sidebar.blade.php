@@ -81,5 +81,9 @@
           </div>
         </div><!--suggestions-list end-->
       </div>
+      @include('partials.chatbox')
     </div><!--right-sidebar end-->
+
   </div>
+
+
